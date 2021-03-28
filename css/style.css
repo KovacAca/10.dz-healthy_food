@@ -89,7 +89,7 @@ header
 ***************/
 header {
   background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.99)), url(../img/header2.jpg);
-  height: 40vh;
+  height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,7 +107,7 @@ header .naslov h1 {
 }
 
 /***************
-order
+footer
 ***************/
 
 /*# sourceMappingURL=style.css.map */
