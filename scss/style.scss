@@ -10,6 +10,16 @@ $transition: .4s ease;
 $padding: 70px 0;
 $textShadow: 0 0 2px  $black;
 /***************
+mixins
+***************/
+@mixin flex($justify, $align, $direction: row, $wrap:wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+/***************
 basic styles
 ***************/
 * {
@@ -23,3 +33,46 @@ body {
     line-height: 1.7;
     color: $black;
 }
+.container {
+  width: 80%;
+  margin: auto;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+  transition: $transition;
+  &:hover {
+    color: $green;
+  }
+}
+/***************
+nav
+***************/
+nav {
+  .container {
+    @include flex(space-between, center);
+    .logo {
+      color: $orange;
+      font-size: 2rem;
+      font-weight: 800;
+      span {
+        font-weight: 400;
+        color: $black;
+        font-style: italic;
+      }
+    }
+    ul {
+      @include flex(space-between, center);
+      li {
+        margin-left: 50px;
+      }
+    }
+  }
+}
+  
+
+
+
