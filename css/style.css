@@ -85,7 +85,7 @@ nav .container ul li {
 }
 
 /***************
-nav
+header
 ***************/
 header {
   background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.99)), url(../img/header2.jpg);
@@ -105,5 +105,9 @@ header .naslov h1 {
   font-weight: 800;
   text-shadow: 1px 1px 1px #221f1a;
 }
+
+/***************
+order
+***************/
 
 /*# sourceMappingURL=style.css.map */
