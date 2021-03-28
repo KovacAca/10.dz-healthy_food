@@ -44,9 +44,24 @@ a {
   text-decoration: none;
   color: $black;
   transition: $transition;
+  font-style: 1.2rem;
   &:hover {
     color: $green;
   }
+}
+button {
+  background-color: $orange;
+  padding: 15px 30px;
+  border: none;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+button:hover {
+  background: $green;
+  color: $white;
+  font-weight: 500;
+  border-radius: 15px;
 }
 /***************
 nav
@@ -70,6 +85,26 @@ nav {
         margin-left: 50px;
       }
     }
+  }
+}
+/***************
+nav
+***************/
+header {
+  background: linear-gradient(to left, rgba(255, 255, 255, .1), rgba(255, 255, 255, .99)), url(../img/header2.jpg);
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex(center, center);
+  .naslov {
+    h1 {
+      color: $orange;
+      font-size: 3rem;
+      font-weight: 800;
+      text-shadow: 1px 1px 1px $black;
+    }
+
   }
 }
   

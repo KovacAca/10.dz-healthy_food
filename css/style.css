@@ -31,9 +31,26 @@ a {
   text-decoration: none;
   color: #221f1a;
   transition: 0.4s ease;
+  font-style: 1.2rem;
 }
 a:hover {
   color: #988d51;
+}
+
+button {
+  background-color: #f8a055;
+  padding: 15px 30px;
+  border: none;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+button:hover {
+  background: #988d51;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 15px;
 }
 
 /***************
@@ -65,6 +82,28 @@ nav .container ul {
 }
 nav .container ul li {
   margin-left: 50px;
+}
+
+/***************
+nav
+***************/
+header {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.99)), url(../img/header2.jpg);
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header .naslov h1 {
+  color: #f8a055;
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 1px #221f1a;
 }
 
 /*# sourceMappingURL=style.css.map */
