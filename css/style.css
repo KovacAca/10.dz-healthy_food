@@ -23,7 +23,7 @@ body {
   margin: auto;
 }
 
-li {
+ul {
   list-style: none;
 }
 
@@ -35,6 +35,10 @@ a {
 }
 a:hover {
   color: #988d51;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 /***************
@@ -110,7 +114,7 @@ mainHeader
 }
 
 /***************
-mainHeader
+uvod
 ***************/
 .uvod {
   padding: 70px 0;
@@ -125,7 +129,6 @@ mainHeader
   padding: 50px;
 }
 .uvod article h2 {
-  font-size: 2.5rem;
   font-weight: 800;
 }
 .uvod article h2 span {
@@ -179,36 +182,43 @@ singleHeaders
 }
 
 /***************
-pictures
+zeleno
 ***************/
-.pictures {
+.zeleno, .organic {
   padding: 70px 0;
   color: #fff;
-  background: url(../img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: auto;
 }
-.pictures .container {
+.zeleno .container, .organic .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.pictures .container article {
+.zeleno .container article, .organic .container article {
   flex: 0 0 45%;
 }
-.pictures .container article img {
+.zeleno .container article img, .organic .container article img {
   width: 100%;
 }
-.pictures .container article p {
+.zeleno .container article p, .organic .container article p {
   margin-top: 30px;
 }
-.pictures .container article h2 {
+.zeleno .container article h2, .organic .container article h2 {
   margin-bottom: 30px;
-  font-size: 2.5rem;
+  text-shadow: 0 0 2px #221f1a;
+}
+
+/***************
+organic
+***************/
+.organic {
+  background-image: url(../img/bg2.jpg);
 }
 
 /***************
