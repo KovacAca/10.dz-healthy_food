@@ -179,6 +179,39 @@ singleHeaders
 }
 
 /***************
+pictures
+***************/
+.pictures {
+  padding: 70px 0;
+  color: #fff;
+  background: url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+}
+.pictures .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pictures .container article {
+  flex: 0 0 45%;
+}
+.pictures .container article img {
+  width: 100%;
+}
+.pictures .container article p {
+  margin-top: 30px;
+}
+.pictures .container article h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/***************
 footer
 ***************/
 footer {

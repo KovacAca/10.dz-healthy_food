@@ -162,6 +162,32 @@ singleHeaders
   }
 }
 /***************
+pictures
+***************/
+.pictures {
+  padding: $padding;
+  color: $white;
+  background: url(../img/bg.jpg);
+  @include bgImg(center, cover, no-repeat, auto);
+  .container {
+    @include flex(space-between, center, row);
+    article {
+      flex: 0 0 45%;
+      img {
+        width: 100%;
+      }
+      p {
+        margin-top: 30px;
+      }
+      h2 {
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+/***************
 footer
 ***************/
 footer {
