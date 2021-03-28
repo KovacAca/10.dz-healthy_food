@@ -19,6 +19,26 @@ mixins
   flex-direction: $direction;
   flex-wrap: $wrap;
 }
+@mixin bgImg($bgPosition, $bgSize, $bgRepeat, $height) {
+  background-position: $bgPosition;
+  background-size: $bgSize;
+  background-repeat: $bgRepeat;
+  height: $height;
+}
+@mixin btn {
+  padding: 15px 30px;
+  background-color: $orange;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  &:hover {
+    background: lighten($orange, 5%);
+    transition: $transition;
+  }
+}
 /***************
 basic styles
 ***************/
@@ -49,20 +69,6 @@ a {
     color: $green;
   }
 }
-button {
-  background-color: $orange;
-  padding: 15px 30px;
-  border: none;
-  margin-top: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-button:hover {
-  background: $green;
-  color: $white;
-  font-weight: 500;
-  border-radius: 15px;
-}
 /***************
 nav
 ***************/
@@ -88,28 +94,66 @@ nav {
   }
 }
 /***************
-header
+mainHeader
 ***************/
-header {
-  background: linear-gradient(to left, rgba(255, 255, 255, .1), rgba(255, 255, 255, .99)), url(../img/header2.jpg);
-  height: 50vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @include flex(center, center);
-  .naslov {
+.mainHeader {
+  background: linear-gradient(to right, rgba(255, 255, 255, .99), rgba(255, 255, 255, .01)), url(../img/header.jpg);
+  @include bgImg(center, cover, no-repeat, 80vh);
+  @include flex(flex-start, center);
+  div {
+    flex: 0 0 40%;
+    margin-left: 10%;
+    padding: 50px;
+    background: linear-gradient(to right, rgba(87, 43, 43, 0.01), rgba(255, 255, 255, .99));
     h1 {
+      font-size: 4rem;
       color: $orange;
-      font-size: 3rem;
-      font-weight: 800;
-      text-shadow: 1px 1px 1px $black;
+      text-shadow: 0 0 2px $black;
     }
-
+    button {
+      @include btn;
+    }
   }
+  
+
 }
 /***************
 footer
 ***************/
+footer {
+  @include flex(center, strech);
+  color: $white;
+  article:first-child {
+    flex: 7;
+    background: $gray;
+    padding: 80px;
+    h3 {
+      padding-bottom: 30px;
+    }
+  }
+  article:last-child {
+    flex: 5;
+    background: $orange;
+    padding: 80px;
+    i {
+      text-shadow: 0 0 2px $black;
+    }
+  }
+}
+/***************
+bottomBar
+***************/
+.bottomBar {
+  text-align: center;
+  padding: 10px;
+  a {
+    color: $orange;
+    a:hover {
+      color: $black;
+    }
+  }
+}
+
 
 
   

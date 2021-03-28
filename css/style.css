@@ -37,22 +37,6 @@ a:hover {
   color: #988d51;
 }
 
-button {
-  background-color: #f8a055;
-  padding: 15px 30px;
-  border: none;
-  margin-top: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-button:hover {
-  background: #988d51;
-  color: #fff;
-  font-weight: 500;
-  border-radius: 15px;
-}
-
 /***************
 nav
 ***************/
@@ -85,29 +69,86 @@ nav .container ul li {
 }
 
 /***************
-header
+mainHeader
 ***************/
-header {
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.99)), url(../img/header2.jpg);
-  height: 50vh;
+.mainHeader {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.01)), url(../img/header.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
-header .naslov h1 {
+.mainHeader div {
+  flex: 0 0 40%;
+  margin-left: 10%;
+  padding: 50px;
+  background: linear-gradient(to right, rgba(87, 43, 43, 0.01), rgba(255, 255, 255, 0.99));
+}
+.mainHeader div h1 {
+  font-size: 4rem;
   color: #f8a055;
-  font-size: 3rem;
-  font-weight: 800;
-  text-shadow: 1px 1px 1px #221f1a;
+  text-shadow: 0 0 2px #221f1a;
+}
+.mainHeader div button {
+  padding: 15px 30px;
+  background-color: #f8a055;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.mainHeader div button:hover {
+  background: #f9ae6d;
+  transition: 0.4s ease;
 }
 
 /***************
 footer
 ***************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: strech;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+}
+footer article:first-child {
+  flex: 7;
+  background: #5a574e;
+  padding: 80px;
+}
+footer article:first-child h3 {
+  padding-bottom: 30px;
+}
+footer article:last-child {
+  flex: 5;
+  background: #f8a055;
+  padding: 80px;
+}
+footer article:last-child i {
+  text-shadow: 0 0 2px #221f1a;
+}
+
+/***************
+bottomBar
+***************/
+.bottomBar {
+  text-align: center;
+  padding: 10px;
+}
+.bottomBar a {
+  color: #f8a055;
+}
+.bottomBar a a:hover {
+  color: #221f1a;
+}
 
 /*# sourceMappingURL=style.css.map */
