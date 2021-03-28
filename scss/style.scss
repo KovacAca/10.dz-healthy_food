@@ -108,7 +108,7 @@ mainHeader
     h1 {
       font-size: 4rem;
       color: $orange;
-      text-shadow: 0 0 2px $black;
+      text-shadow: $textShadow;
     }
     button {
       @include btn;
@@ -135,13 +135,30 @@ mainHeader
     h3 {
       font-size: 5rem;
       color: $orange;
-      text-shadow: 0 0 2px $black;
+      text-shadow: $textShadow;
     }
     h4 {
       font-size: 1.5rem;
       margin-bottom: 30px;
     }
 
+  }
+}
+/***************
+singleHeaders
+***************/
+.singleHeaders {
+  background: linear-gradient(to right, rgba(255, 255, 255, .99), rgba(255, 255, 255, .01)), url(../img/header2.jpg);
+  @include bgImg(center, cover, no-repeat, 50vh);
+  @include flex(center, flex-start, column);
+  margin-left: 10%;
+  h1 {
+    font-size: 3rem;
+    color: $orange;
+    text-shadow: $textShadow;
+  }
+  button {
+    @include btn;
   }
 }
 /***************
@@ -163,7 +180,7 @@ footer {
     background: $orange;
     padding: 80px;
     i {
-      text-shadow: 0 0 2px $black;
+      text-shadow: $textShadow;
     }
   }
 }

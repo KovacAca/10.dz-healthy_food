@@ -143,6 +143,42 @@ mainHeader
 }
 
 /***************
+singleHeaders
+***************/
+.singleHeaders {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.01)), url(../img/header2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 10%;
+}
+.singleHeaders h1 {
+  font-size: 3rem;
+  color: #f8a055;
+  text-shadow: 0 0 2px #221f1a;
+}
+.singleHeaders button {
+  padding: 15px 30px;
+  background-color: #f8a055;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.singleHeaders button:hover {
+  background: #f9ae6d;
+  transition: 0.4s ease;
+}
+
+/***************
 footer
 ***************/
 footer {
