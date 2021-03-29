@@ -56,6 +56,9 @@ body {
 .container {
   width: 80%;
   margin: auto;
+  @media(max-width: 768px) {
+    width: 95%;
+  }
 }
 ul {
   list-style: none;
@@ -71,6 +74,9 @@ a {
 }
 h2 {
   font-size: 3rem;
+  @media(max-width: 768px) {
+    font-size: 2rem;
+  }
 }
 /***************
 nav
@@ -78,6 +84,9 @@ nav
 nav {
   .container {
     @include flex(space-between, center);
+    @media(max-width: 768px) {
+      @include flex(space-between, center, column, wrap);
+    }
     .logo {
       color: $orange;
       font-size: 2rem;
@@ -92,6 +101,9 @@ nav {
       @include flex(space-between, center);
       li {
         margin-left: 50px;
+        @media(max-width: 768px) {
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -102,16 +114,23 @@ mainHeader
 .mainHeader {
   background: linear-gradient(to right, rgba(255, 255, 255, .99), rgba(255, 255, 255, .01)), url(../img/header.jpg);
   @include bgImg(center, cover, no-repeat, 80vh);
-  @include flex(flex-start, center);
+  @include flex(flex-start, center, row, wrap);
   div {
     flex: 0 0 40%;
     margin-left: 10%;
     padding: 50px;
-    background: linear-gradient(to right, rgba(87, 43, 43, 0.01), rgba(255, 255, 255, .99));
+    background: linear-gradient(to right, rgba($white, 0.01), rgba($white, .99));
+    @media(max-width: 768px) {
+      flex: 0 0 100%;
+      margin: 0;
+  }
     h1 {
       font-size: 4rem;
       color: $orange;
       text-shadow: $textShadow;
+      @media(max-width: 768px) {
+         font-size: 2rem;
+     }
     }
     button {
       @include btn;
@@ -123,10 +142,14 @@ uvod
 ***************/
 .uvod {
   padding: $padding;
-  @include flex(space-between, center);
+  @include flex(space-between, center, row, wrap);
   article {
     flex: 1;
     padding: 50px;
+    @media(max-width: 768px) {
+      @include flex(space-between, center, column, wrap);
+      flex: 0 0 100%;
+  }
     h2 {
       font-weight: 800;
       span {
@@ -153,10 +176,16 @@ singleHeaders
   @include bgImg(center, cover, no-repeat, 50vh);
   @include flex(center, flex-start, column);
   margin-left: 10%;
+  @media(max-width: 768px) {
+    @include bgImg(left, cover, no-repeat, 50vh);
+  }
   h1 {
     font-size: 3rem;
     color: $orange;
     text-shadow: $textShadow;
+    @media(max-width: 768px) {
+      font-size: 2rem;
+    }
   }
   button {
     @include btn;
@@ -174,6 +203,9 @@ zeleno
     @include flex(space-between, center);
     article {
       flex: 0 0 45%;
+      @media(max-width: 768px) {
+        flex: 0 0 100%;
+     }
       img {
         width: 100%;
       }
@@ -193,6 +225,15 @@ organic
 .organic {
   @extend .zeleno;
   background-image: url(../img/bg2.jpg);
+  @media(max-width: 768px) {
+    article:last-child {
+      @include flex(space-between, center);
+      p {
+        order: -1;
+        margin-bottom: 30px;
+      }
+    }
+ }    
 }
 /***************
 poruci
@@ -201,6 +242,9 @@ poruci
   @include flex(center, stretch, row, wrap);
   article {
     flex: 1;
+    @media(max-width: 768px) {
+      flex: 0 0 100%;
+   }
     img {
       width: 100%;
       display: block;
@@ -214,6 +258,16 @@ poruci
         color: $white;
       }
     }
+  }
+  article:nth-child(1) {
+    @media(max-width: 768px) {
+      display: none;
+   }
+  }
+  article:nth-child(2) {
+    @media(max-width: 768px) {
+      order: 3;
+   }
   }
   article:last-child {
     background: $orange;

@@ -22,6 +22,11 @@ body {
   width: 80%;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
 
 ul {
   list-style: none;
@@ -40,6 +45,11 @@ a:hover {
 h2 {
   font-size: 3rem;
 }
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
 
 /***************
 nav
@@ -50,6 +60,15 @@ nav .container {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 nav .container .logo {
   color: #f8a055;
@@ -71,6 +90,11 @@ nav .container ul {
 nav .container ul li {
   margin-left: 50px;
 }
+@media (max-width: 768px) {
+  nav .container ul li {
+    margin-left: 10px;
+  }
+}
 
 /***************
 mainHeader
@@ -91,12 +115,23 @@ mainHeader
   flex: 0 0 40%;
   margin-left: 10%;
   padding: 50px;
-  background: linear-gradient(to right, rgba(87, 43, 43, 0.01), rgba(255, 255, 255, 0.99));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.99));
+}
+@media (max-width: 768px) {
+  .mainHeader div {
+    flex: 0 0 100%;
+    margin: 0;
+  }
 }
 .mainHeader div h1 {
   font-size: 4rem;
   color: #f8a055;
   text-shadow: 0 0 2px #221f1a;
+}
+@media (max-width: 768px) {
+  .mainHeader div h1 {
+    font-size: 2rem;
+  }
 }
 .mainHeader div button {
   padding: 15px 30px;
@@ -127,6 +162,16 @@ uvod
 .uvod article {
   flex: 1;
   padding: 50px;
+}
+@media (max-width: 768px) {
+  .uvod article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+  }
 }
 .uvod article h2 {
   font-weight: 800;
@@ -161,10 +206,23 @@ singleHeaders
   flex-wrap: wrap;
   margin-left: 10%;
 }
+@media (max-width: 768px) {
+  .singleHeaders {
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
+}
 .singleHeaders h1 {
   font-size: 3rem;
   color: #f8a055;
   text-shadow: 0 0 2px #221f1a;
+}
+@media (max-width: 768px) {
+  .singleHeaders h1 {
+    font-size: 2rem;
+  }
 }
 .singleHeaders button {
   padding: 15px 30px;
@@ -203,6 +261,11 @@ zeleno
 .zeleno .container article, .organic .container article {
   flex: 0 0 45%;
 }
+@media (max-width: 768px) {
+  .zeleno .container article, .organic .container article {
+    flex: 0 0 100%;
+  }
+}
 .zeleno .container article img, .organic .container article img {
   width: 100%;
 }
@@ -220,6 +283,19 @@ organic
 .organic {
   background-image: url(../img/bg2.jpg);
 }
+@media (max-width: 768px) {
+  .organic article:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .organic article:last-child p {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
 
 /***************
 poruci
@@ -233,6 +309,11 @@ poruci
 }
 .poruci article {
   flex: 1;
+}
+@media (max-width: 768px) {
+  .poruci article {
+    flex: 0 0 100%;
+  }
 }
 .poruci article img {
   width: 100%;
@@ -257,6 +338,16 @@ poruci
 .poruci article button:hover {
   background: #5a574e;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .poruci article:nth-child(1) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .poruci article:nth-child(2) {
+    order: 3;
+  }
 }
 .poruci article:last-child {
   background: #f8a055;
