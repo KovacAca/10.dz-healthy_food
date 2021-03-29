@@ -194,6 +194,33 @@ organic
   @extend .zeleno;
   background-image: url(../img/bg2.jpg);
 }
+/***************
+poruci
+***************/
+.poruci {
+  @include flex(center, stretch, row, wrap);
+  article {
+    flex: 1;
+    img {
+      width: 100%;
+      display: block;
+    }
+    button {
+      @include btn;
+      background: $white;
+      display: block;
+      &:hover {
+        background: $gray;
+        color: $white;
+      }
+    }
+  }
+  article:last-child {
+    background: $orange;
+    padding: 50px;
+    @include flex(center, flex-start, column, wrap);
+  }
+}
 
 /***************
 footer

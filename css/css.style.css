@@ -226,8 +226,8 @@ poruci
 ***************/
 .poruci {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -237,35 +237,6 @@ poruci
 .poruci article img {
   width: 100%;
   display: block;
-}
-.poruci article button {
-  padding: 15px 30px;
-  background-color: #f8a055;
-  border: none;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  margin-top: 20px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  background: #fff;
-  display: block;
-}
-.poruci article button:hover {
-  background: #f9ae6d;
-  transition: 0.4s ease;
-}
-.poruci article button:hover {
-  background: #5a574e;
-  color: #fff;
-}
-.poruci article:last-child {
-  background: #f8a055;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 /***************
@@ -310,4 +281,4 @@ bottomBar
   color: #221f1a;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=css.style.css.map */
